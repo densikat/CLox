@@ -3,4 +3,4 @@ project(CLox C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(CLox main.c common.h chunk.h)
+add_executable(CLox main.c common.h chunk.h chunk.c memory.h memory.c debug.h debug.c value.h value.c)
