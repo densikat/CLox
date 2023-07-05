@@ -35,3 +35,11 @@
 /cmake-build-debug/CLox
 /cmake-build-debug/cmake_install.cmake
 /cmake-build-debug/CMakeCache.txt
+/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-d8946a1b16dc7d428cbe.json
+/cmake-build-debug/.cmake/api/v1/reply/index-2023-07-03T04-57-58-0630.json
+/cmake-build-debug/.cmake/api/v1/reply/target-CLox-Debug-2f312aa4807d857d942f.json
+/cmake-build-debug/CMakeFiles/CLox.dir/chunk.c.o
+/cmake-build-debug/CMakeFiles/CLox.dir/debug.c.o
+/cmake-build-debug/CMakeFiles/CLox.dir/memory.c.o
+/cmake-build-debug/CMakeFiles/CLox.dir/value.c.o
+/cmake-build-debug/CMakeFiles/CLox.dir/vm.c.o
