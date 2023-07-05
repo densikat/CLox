@@ -28,6 +28,6 @@ void freeValueArray(ValueArray *array) {
   initValueArray(array);
 }
 void printValue(Value value) {
-  printf("%g", value);
+  printf("%g", AS_NUMBER(value));
 }
 
