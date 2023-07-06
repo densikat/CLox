@@ -43,3 +43,5 @@
 /cmake-build-debug/CMakeFiles/CLox.dir/memory.c.o
 /cmake-build-debug/CMakeFiles/CLox.dir/value.c.o
 /cmake-build-debug/CMakeFiles/CLox.dir/vm.c.o
+/cmake-build-debug/CMakeFiles/CLox.dir/compiler.c.o
+/cmake-build-debug/CMakeFiles/CLox.dir/scanner.c.o
