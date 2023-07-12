@@ -1,11 +1,9 @@
-fun myfunc(n) {
-  if (n > 2) {
-    print "Number is greater than 2";
-  } else {
-    print "Number is not greater than 2";
+var x = "global";
+fun outer() {
+  var x = "outer";
+  fun inner() {
+    print x;
   }
+  inner();
 }
-
-var start = clock();
-myfunc(3);
-print clock() - start;
+outer();
