@@ -9,5 +9,6 @@
 #include "object.h"
 
 ObjFunction* compile(const char* source);
+void markCompilerRoots();
 
 #endif //CLOX__COMPILER_H_
