@@ -23,6 +23,7 @@ typedef enum {
   OP_SET_UPVALUE,
   OP_GET_PROPERTY,
   OP_SET_PROPERTY,
+  OP_GET_SUPER,
   OP_EQUAL,
   OP_GREATER,
   OP_LESS,
@@ -38,6 +39,7 @@ typedef enum {
   OP_LOOP,
   OP_CALL,
   OP_INVOKE,
+  OP_SUPER_INVOKE,
   OP_CLOSURE,
   OP_CLOSE_UPVALUE,
   OP_RETURN,
@@ -49,14 +51,14 @@ typedef enum {
 typedef struct {
   int count;
   int capacity;
-  uint8_t* code;
-  int* lines;
+  uint8_t *code;
+  int *lines;
   ValueArray constants;
 } Chunk;
 
-void initChunk(Chunk* chunk);
-void freeChunk(Chunk* chunk);
-void writeChunk(Chunk* chunk, uint8_t byte, int line);
-int addConstant(Chunk* chunk, Value value);
+void initChunk(Chunk *chunk);
+void freeChunk(Chunk *chunk);
+void writeChunk(Chunk *chunk, uint8_t byte, int line);
+int addConstant(Chunk *chunk, Value value);
 
 #endif //CLOX__CHUNK_H_
