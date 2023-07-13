@@ -89,6 +89,7 @@ static void patchJump(int offset);
 static void statement();
 static void declaration();
 static ParseRule* getRule(TokenType type);
+static void variable(bool canAssign);
 
 // Globals
 Parser parser;
@@ -444,6 +445,18 @@ static void classDeclaration() {
   ClassCompiler classCompiler;
   classCompiler.enclosing = currentClass;
   currentClass = &classCompiler;
+
+  if (match(TOKEN_LESS)) {
+	consume(TOKEN_IDENTIFIER, "Expect superclass name.");
+	variable(false);
+
+	if (identifiersEqual(&className, &parser.previous)) {
+	  error("A class can't inherit from itself.");
+	}
+
+	namedVariable(className, false);
+	emitByte(OP_INHERIT);
+  }
 
   namedVariable(className, false);
   consume(TOKEN_LEFT_BRACE, "Expect '{' before class body.");
@@ -905,4 +918,3 @@ void markCompilerRoots() {
 	markObject((Obj*)compiler->function);
 	compiler = compiler->enclosing;
   }
-}
